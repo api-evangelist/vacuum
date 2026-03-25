@@ -1,0 +1,41 @@
+aid: vacuum
+name: Vacuum
+description: >-
+  Vacuum is a high-performance, open source OpenAPI and Swagger linter built in
+  Go for validating and linting API specifications at scale.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Documentation
+  - Linting
+  - API Design
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/vacuum/refs/heads/main/apis.yml
+created: '2026-03-25'
+modified: '2026-03-25'
+specificationVersion: '0.19'
+apis:
+  - aid: vacuum:vacuum
+    name: Vacuum
+    description: >-
+      Vacuum is a high-performance, open source OpenAPI and Swagger linter built in
+      Go for validating and linting API specifications at scale.
+    humanURL: https://quobix.com/vacuum
+    tags:
+      - Documentation
+      - Linting
+    properties:
+      - type: Documentation
+        url: https://quobix.com/vacuum/about
+      - type: Getting Started
+        url: https://quobix.com/vacuum/start
+common:
+  - type: Website
+    url: https://quobix.com/vacuum
+  - type: Documentation
+    url: https://quobix.com/vacuum/about
+  - type: GitHub Organization
+    url: https://github.com/daveshanley
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
