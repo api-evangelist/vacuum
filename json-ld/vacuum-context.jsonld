@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "@vocab": "https://quobix.com/vacuum/vocab#",
+    "schema": "https://schema.org/",
+    "dcat": "https://www.w3.org/ns/dcat#",
+    "Ruleset": "schema:CreativeWork",
+    "Rule": "schema:Action",
+    "Report": "schema:Report",
+    "RuleResult": "schema:ListItem",
+    "description": "schema:description",
+    "severity": "schema:additionalProperty",
+    "message": "schema:text",
+    "given": "schema:query",
+    "errors": "schema:error",
+    "path": "schema:identifier",
+    "startLine": "schema:startOffset",
+    "endLine": "schema:endOffset",
+    "generated": "schema:dateCreated",
+    "version": "schema:version",
+    "format": "schema:encodingFormat",
+    "totalErrors": "schema:errorCount",
+    "totalWarnings": "schema:warningCount"
+  }
+}

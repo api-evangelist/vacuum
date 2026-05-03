@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quobix.com/vacuum/schemas/ruleset",
+  "title": "Vacuum Ruleset",
+  "description": "A Vacuum/Spectral-compatible ruleset for OpenAPI linting",
+  "type": "object",
+  "properties": {
+    "extends": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "type": "string" },
+              {
+                "type": "array",
+                "items": [
+                  { "type": "string" },
+                  { "type": "string", "enum": ["all", "recommended", "off"] }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Extend built-in or external rulesets"
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/Rule"
+      },
+      "description": "Custom rule definitions"
+    },
+    "formats": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Supported specification formats"
+    }
+  },
+  "definitions": {
+    "Rule": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "message": { "type": "string" },
+        "severity": {
+          "type": "string",
+          "enum": ["error", "warn", "info", "hint", "off"]
+        },
+        "given": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ],
+          "description": "JSONPath expression(s) to target"
+        },
+        "then": {
+          "oneOf": [
+            { "$ref": "#/definitions/RuleThen" },
+            { "type": "array", "items": { "$ref": "#/definitions/RuleThen" } }
+          ]
+        }
+      },
+      "required": ["description", "given", "then"]
+    },
+    "RuleThen": {
+      "type": "object",
+      "properties": {
+        "function": {
+          "type": "string",
+          "description": "Function name to apply (truthy, falsy, defined, undefined, pattern, schema, etc.)"
+        },
+        "field": {
+          "type": "string",
+          "description": "Optional field to apply the function to"
+        },
+        "functionOptions": {
+          "type": "object",
+          "description": "Options to pass to the function"
+        }
+      },
+      "required": ["function"]
+    }
+  }
+}

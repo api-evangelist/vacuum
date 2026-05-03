@@ -1,0 +1,85 @@
+vocabulary:
+  name: Vacuum Vocabulary
+  description: Domain vocabulary for OpenAPI linting, rulesets, and API quality analysis
+  version: '1.0'
+  created: '2026-05-03'
+  modified: '2026-05-03'
+  terms:
+    - term: Ruleset
+      definition: A collection of rules applied to validate an OpenAPI specification
+      category: Core Concept
+      tags:
+        - Linting
+        - Configuration
+    - term: Rule
+      definition: A single validation check applied to a specific part of an OpenAPI specification
+      category: Core Concept
+      tags:
+        - Linting
+        - Validation
+    - term: Severity
+      definition: The impact level of a rule violation - error, warn, info, or hint
+      category: Attribute
+      tags:
+        - Linting
+        - Classification
+    - term: Violation
+      definition: An instance where a rule check fails against an OpenAPI specification
+      category: Core Concept
+      tags:
+        - Linting
+        - Results
+    - term: JSONPath
+      definition: A query language for selecting elements from JSON/YAML documents, used in rule 'given' fields
+      category: Technical
+      tags:
+        - Query Language
+        - Configuration
+    - term: Spectral
+      definition: An open-source JSON/YAML linter; Vacuum is fully compatible with Spectral rulesets
+      category: Integration
+      tags:
+        - Linting
+        - Compatibility
+    - term: Dashboard
+      definition: An interactive console UI for exploring linting violations and rule results
+      category: Interface
+      tags:
+        - UI
+        - Reporting
+    - term: Vacuum Sealed Report
+      definition: A portable snapshot of linting results that can be re-rendered without re-running analysis
+      category: Artifact
+      tags:
+        - Reporting
+        - Portability
+    - term: Language Server Protocol
+      definition: A protocol enabling IDE integration for real-time linting as you edit specifications
+      category: Integration
+      tags:
+        - IDE
+        - Development
+    - term: OpenAPI Overlay
+      definition: A specification for applying non-destructive modifications to OpenAPI documents
+      category: Standard
+      tags:
+        - OpenAPI
+        - Standards
+    - term: Custom Function
+      definition: A Go or JavaScript function that extends Vacuum with custom validation logic
+      category: Extension
+      tags:
+        - Extensibility
+        - Development
+    - term: OWASP API Security
+      definition: Built-in rules aligned with the OWASP API Security Top 10 list
+      category: Security
+      tags:
+        - Security
+        - OWASP
+    - term: Auto-fix
+      definition: Automated resolution of certain rule violations in the specification
+      category: Feature
+      tags:
+        - Automation
+        - Quality

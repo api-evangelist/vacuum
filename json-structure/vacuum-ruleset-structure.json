@@ -1,0 +1,18 @@
+{
+  "name": "Vacuum Ruleset",
+  "description": "Structure of a Vacuum/Spectral-compatible linting ruleset",
+  "fields": [
+    { "name": "extends", "type": "string|array", "required": false, "description": "Extend built-in or external rulesets" },
+    { "name": "rules", "type": "object", "required": false, "description": "Custom rule definitions keyed by rule name" },
+    { "name": "formats", "type": "array", "required": false, "description": "Supported specification formats" }
+  ],
+  "nested": {
+    "rules[*]": [
+      { "name": "description", "type": "string", "required": true, "description": "Human-readable rule description" },
+      { "name": "message", "type": "string", "required": false, "description": "Message shown when rule fails" },
+      { "name": "severity", "type": "enum[error,warn,info,hint,off]", "required": false, "description": "Rule severity level" },
+      { "name": "given", "type": "string|array", "required": true, "description": "JSONPath expression to target" },
+      { "name": "then", "type": "object|array", "required": true, "description": "Function(s) to apply" }
+    ]
+  }
+}

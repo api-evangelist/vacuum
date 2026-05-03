@@ -1,0 +1,40 @@
+{
+  "description": "Example Vacuum/Spectral ruleset for enforcing API design standards",
+  "example": {
+    "extends": ["spectral:oas"],
+    "rules": {
+      "operation-must-have-summary": {
+        "description": "All operations must have a summary",
+        "message": "Operation must have a summary field",
+        "severity": "error",
+        "given": "$.paths[*][get,post,put,delete,patch]",
+        "then": {
+          "function": "truthy",
+          "field": "summary"
+        }
+      },
+      "operation-tags-required": {
+        "description": "All operations must have at least one tag",
+        "message": "Operations should be tagged",
+        "severity": "warn",
+        "given": "$.paths[*][get,post,put,delete,patch]",
+        "then": {
+          "function": "truthy",
+          "field": "tags"
+        }
+      },
+      "path-kebab-case": {
+        "description": "Path segments should use kebab-case",
+        "message": "Path segments should be kebab-case",
+        "severity": "warn",
+        "given": "$.paths[*]~",
+        "then": {
+          "function": "pattern",
+          "functionOptions": {
+            "match": "^(/[a-z0-9-{}/]+)*$"
+          }
+        }
+      }
+    }
+  }
+}
