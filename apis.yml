@@ -37,7 +37,7 @@ apis:
     properties:
       - type: Documentation
         url: https://quobix.com/vacuum/about
-      - type: Getting Started
+      - type: GettingStarted
         url: https://quobix.com/vacuum/start
       - type: GitHub
         url: https://github.com/daveshanley/vacuum
@@ -94,9 +94,9 @@ common:
     url: https://quobix.com/vacuum
   - type: Documentation
     url: https://quobix.com/vacuum/about
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/daveshanley
-  - type: GitHub Repository
+  - type: GitHubRepository
     url: https://github.com/daveshanley/vacuum
   - type: NPM Package
     url: https://www.npmjs.com/package/@quobix/vacuum
