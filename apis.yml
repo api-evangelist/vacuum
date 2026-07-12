@@ -90,6 +90,8 @@ apis:
       - name: Spectral
         description: Compatible with Spectral rulesets and report formats
 common:
+  - type: DomainSecurity
+    url: security/vacuum-domain-security.yml
   - type: Website
     url: https://quobix.com/vacuum
   - type: Documentation

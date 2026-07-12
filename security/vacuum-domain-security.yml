@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: quobix.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan 21 23:59:59 2027 GMT
+  hsts: false
+domains:
+- domain: quobix.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
