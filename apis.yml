@@ -5,6 +5,18 @@ description: >-
   Go for validating and linting API specifications at scale. It is 100% compatible with
   Spectral rulesets and supports OpenAPI 3.0, 3.1, and 3.2.
 type: Index
+deliveryModel:
+  model: self-hosted
+  license: MIT
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
@@ -102,6 +114,10 @@ apis:
       - name: Spectral
         description: Compatible with Spectral rulesets and report formats
 common:
+  - type: IssueTracker
+    url: https://github.com/daveshanley/vacuum/issues
+  - type: Releases
+    url: https://github.com/daveshanley/vacuum/releases
   - type: License
     name: MIT
     url: https://github.com/daveshanley/vacuum/blob/main/LICENSE
