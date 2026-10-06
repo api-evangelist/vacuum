@@ -41,7 +41,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/vacuum/refs/heads/main/apis.yml
 created: '2026-03-25'
-modified: '2026-05-03'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
   - aid: vacuum:vacuum
@@ -114,6 +114,10 @@ apis:
       - name: Spectral
         description: Compatible with Spectral rulesets and report formats
 common:
+  - url: https://quobix.com/articles/
+    type: Blog
+  - url: https://quobix.com/articles/index.xml
+    type: BlogRSS
   - type: IssueTracker
     url: https://github.com/daveshanley/vacuum/issues
   - type: Releases
