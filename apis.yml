@@ -114,6 +114,12 @@ apis:
       - name: Spectral
         description: Compatible with Spectral rulesets and report formats
 common:
+  - type: Plans
+    url: plans/vacuum-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/vacuum-rate-limits.yml
+  - type: FinOps
+    url: finops/vacuum-finops.yml
   - url: https://quobix.com/articles/
     type: Blog
   - url: https://quobix.com/articles/index.xml
